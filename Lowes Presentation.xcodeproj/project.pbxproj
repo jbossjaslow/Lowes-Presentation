@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		3999B1A924AAC63F00428F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1A824AAC63F00428F3A /* AppDelegate.swift */; };
 		3999B1AB24AAC63F00428F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1AA24AAC63F00428F3A /* SceneDelegate.swift */; };
-		3999B1AD24AAC63F00428F3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1AC24AAC63F00428F3A /* ViewController.swift */; };
+		3999B1AD24AAC63F00428F3A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1AC24AAC63F00428F3A /* MainMenuViewController.swift */; };
 		3999B1B024AAC63F00428F3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3999B1AE24AAC63F00428F3A /* Main.storyboard */; };
 		3999B1B224AAC64000428F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3999B1B124AAC64000428F3A /* Assets.xcassets */; };
 		3999B1B524AAC64000428F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3999B1B324AAC64000428F3A /* LaunchScreen.storyboard */; };
 		3999B1C024AAC64000428F3A /* Lowes_PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1BF24AAC64000428F3A /* Lowes_PresentationTests.swift */; };
 		3999B1CB24AAC64000428F3A /* Lowes_PresentationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1CA24AAC64000428F3A /* Lowes_PresentationUITests.swift */; };
+		3999B1DC24AAD8F400428F3A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1DB24AAD8F400428F3A /* Coordinator.swift */; };
+		3999B1DF24AAD95700428F3A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1DE24AAD95700428F3A /* Storyboarded.swift */; };
+		3999B1E124AAD9ED00428F3A /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3999B1E024AAD9ED00428F3A /* MainMenuCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		3999B1A524AAC63F00428F3A /* Lowes Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lowes Presentation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3999B1A824AAC63F00428F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3999B1AA24AAC63F00428F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3999B1AC24AAC63F00428F3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3999B1AC24AAC63F00428F3A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		3999B1AF24AAC63F00428F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3999B1B124AAC64000428F3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3999B1B424AAC64000428F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		3999B1C624AAC64000428F3A /* Lowes PresentationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lowes PresentationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3999B1CA24AAC64000428F3A /* Lowes_PresentationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lowes_PresentationUITests.swift; sourceTree = "<group>"; };
 		3999B1CC24AAC64000428F3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3999B1DB24AAD8F400428F3A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3999B1DE24AAD95700428F3A /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		3999B1E024AAD9ED00428F3A /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,10 @@
 		3999B1A724AAC63F00428F3A /* Lowes Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				3999B1A824AAC63F00428F3A /* AppDelegate.swift */,
-				3999B1AA24AAC63F00428F3A /* SceneDelegate.swift */,
-				3999B1AC24AAC63F00428F3A /* ViewController.swift */,
-				3999B1AE24AAC63F00428F3A /* Main.storyboard */,
+				3999B1DD24AAD94900428F3A /* Storyboarded */,
+				3999B1D924AAD8B900428F3A /* Necessary App Files */,
+				3999B1D824AAD8AC00428F3A /* Coordinators */,
+				3999B1DA24AAD8DD00428F3A /* Main Menu */,
 				3999B1B124AAC64000428F3A /* Assets.xcassets */,
 				3999B1B324AAC64000428F3A /* LaunchScreen.storyboard */,
 				3999B1B624AAC64000428F3A /* Info.plist */,
@@ -126,6 +132,41 @@
 				3999B1CC24AAC64000428F3A /* Info.plist */,
 			);
 			path = "Lowes PresentationUITests";
+			sourceTree = "<group>";
+		};
+		3999B1D824AAD8AC00428F3A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				3999B1DB24AAD8F400428F3A /* Coordinator.swift */,
+				3999B1E024AAD9ED00428F3A /* MainMenuCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		3999B1D924AAD8B900428F3A /* Necessary App Files */ = {
+			isa = PBXGroup;
+			children = (
+				3999B1A824AAC63F00428F3A /* AppDelegate.swift */,
+				3999B1AA24AAC63F00428F3A /* SceneDelegate.swift */,
+			);
+			path = "Necessary App Files";
+			sourceTree = "<group>";
+		};
+		3999B1DA24AAD8DD00428F3A /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3999B1AC24AAC63F00428F3A /* MainMenuViewController.swift */,
+				3999B1AE24AAC63F00428F3A /* Main.storyboard */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		3999B1DD24AAD94900428F3A /* Storyboarded */ = {
+			isa = PBXGroup;
+			children = (
+				3999B1DE24AAD95700428F3A /* Storyboarded.swift */,
+			);
+			path = Storyboarded;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3999B1AD24AAC63F00428F3A /* ViewController.swift in Sources */,
+				3999B1E124AAD9ED00428F3A /* MainMenuCoordinator.swift in Sources */,
+				3999B1DC24AAD8F400428F3A /* Coordinator.swift in Sources */,
+				3999B1AD24AAC63F00428F3A /* MainMenuViewController.swift in Sources */,
+				3999B1DF24AAD95700428F3A /* Storyboarded.swift in Sources */,
 				3999B1A924AAC63F00428F3A /* AppDelegate.swift in Sources */,
 				3999B1AB24AAC63F00428F3A /* SceneDelegate.swift in Sources */,
 			);
@@ -435,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E5AAHWL9DL;
 				INFOPLIST_FILE = "Lowes Presentation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E5AAHWL9DL;
 				INFOPLIST_FILE = "Lowes Presentation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

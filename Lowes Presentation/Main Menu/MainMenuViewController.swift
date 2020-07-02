@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainMenuViewController: UIViewController, Storyboarded {
+	weak var coordinator: MainMenuCoordinator?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
