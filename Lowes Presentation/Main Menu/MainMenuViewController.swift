@@ -16,6 +16,9 @@ class MainMenuViewController: UIViewController, Storyboarded {
 		// Do any additional setup after loading the view.
 	}
 
-
+	@IBAction func testButton(_ sender: UIButton) {
+		print(sender.titleLabel?.text ?? "Button has no text")
+	}
+	
 }
 

@@ -15,8 +15,37 @@ protocol Storyboarded {
 extension Storyboarded where Self: UIViewController {
 	//Allows us to create VCs in a storyboard with the same storyboard ID as the class name
 	static func instantiate() -> Self {
-		let id = String(describing: self)
-		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		return storyboard.instantiateViewController(identifier: id) as! Self
+		let bundle = Bundle(for: self)
+		return Self.instantiate(bundle: bundle)
+	}
+	
+	static func instantiate(for storyboardName: String) -> Self {
+		let bundle = Bundle(for: self)
+		return Self.instantiate(for: storyboardName, in: bundle)
+	}
+	
+	static func instantiate(for storyboardName: String, in bundle: Bundle) -> Self {
+		let fullName = NSStringFromClass(self)
+		let className = fullName.components(separatedBy: ".")[1]
+		
+		let storyboard = UIStoryboard(name: storyboardName, bundle: bundle)
+		
+		guard let viewController = storyboard.instantiateViewController(withIdentifier: className) as? Self else {
+			fatalError("Unable to get viewcontroller from storyboard: \(className)")
+		}
+		
+		return viewController
+	}
+	
+	static func instantiate(bundle: Bundle) -> Self {
+		let fullName = NSStringFromClass(self)
+		let className = fullName.components(separatedBy: ".")[1]
+		
+		let storyboard = UIStoryboard(name: className, bundle: bundle)
+		guard let viewController = storyboard.instantiateViewController(withIdentifier: className) as? Self else {
+			fatalError("Unable to get viewcontroller from storyboard: \(className)")
+		}
+		
+		return viewController
 	}
 }

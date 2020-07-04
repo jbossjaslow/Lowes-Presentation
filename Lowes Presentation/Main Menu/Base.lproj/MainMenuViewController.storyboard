@@ -19,11 +19,17 @@
                                 <rect key="frame" x="191" y="514" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Josh"/>
+                                <connections>
+                                    <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXg-v4-gmY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhj-rp-f84">
                                 <rect key="frame" x="179" y="275" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Jasmine"/>
+                                <connections>
+                                    <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSg-YL-iFf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -32,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="662" y="116"/>
         </scene>
     </scenes>
 </document>

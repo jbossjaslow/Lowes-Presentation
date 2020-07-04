@@ -14,3 +14,16 @@ protocol Coordinator: AnyObject {
 	
 	func start()
 }
+
+extension Coordinator {
+	func childDidFinish(_ child: Coordinator?) {
+		for (index, coordinator) in childCoordinators.enumerated() where coordinator === child {
+			childCoordinators.remove(at: index)
+			break
+		}
+	}
+	
+	func finish(completion: (() -> Void)? = nil) {
+		self.navigationController.dismiss(animated: true, completion: completion)
+	}
+}

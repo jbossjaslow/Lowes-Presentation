@@ -19,18 +19,8 @@ class MainMenuCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 	func start() {
 		navigationController.delegate = self
 		let vc = MainMenuViewController.instantiate()
-		vc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
 		vc.coordinator = self
 		navigationController.pushViewController(vc, animated: false)
-	}
-	
-	func childDidFinish(_ child: Coordinator?) {
-		for (index, coordinator) in childCoordinators.enumerated() {
-			if coordinator === child {
-				childCoordinators.remove(at: index)
-				break
-			}
-		}
 	}
 	
 	func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
@@ -41,9 +31,5 @@ class MainMenuCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 		if navigationController.viewControllers.contains(fromViewController) {
 			return
 		}
-		
-//		if let buyViewController = fromViewController as? BuyViewController {
-//			childDidFinish(buyViewController.coordinator)
-//		}
 	}
 }
