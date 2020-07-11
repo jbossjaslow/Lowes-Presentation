@@ -15,7 +15,6 @@ class Page1ViewController: UIViewController, Storyboarded {
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation

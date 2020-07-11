@@ -11,6 +11,8 @@ import UIKit
 class JoshPageViewModel: NSObject {
 	
 	weak var viewController: JoshPageViewController?
+	var pageControl = UIPageControl()
+	
 	var infiniteSwipe: Bool = true
 	
 	lazy var pages: [UIViewController] = {
@@ -31,6 +33,23 @@ class JoshPageViewModel: NSObject {
 							  animated: true,
 							  completion: nil)
 		self.viewController = viewController
+	}
+}
+
+extension JoshPageViewModel {
+	func formatPageControl() -> UIPageControl {
+		guard let vc = viewController else { return UIPageControl() }
+		let pc = UIPageControl(frame: .init(x: 0,
+											y: vc.view.frame.maxY - 50,
+											width: vc.view.frame.width,
+											height: 50))
+		pc.numberOfPages = pages.count
+		pc.currentPage = 0
+		pc.tintColor = .white
+		pc.currentPageIndicatorTintColor = .white
+		pc.pageIndicatorTintColor = .black
+		pageControl = pc
+		return pageControl
 	}
 }
 
@@ -63,11 +82,17 @@ extension JoshPageViewModel: UIPageViewControllerDelegate, UIPageViewControllerD
 		}
 	}
 	
-	func presentationCount(for pageViewController: UIPageViewController) -> Int {
-		return pages.count
+	func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+		guard let shownVC = pageViewController.viewControllers?[0],
+			let position = pages.firstIndex(of: shownVC) else { return }
+		pageControl.currentPage = position
 	}
-
-	func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-		return 0
-	}
+	
+//	func presentationCount(for pageViewController: UIPageViewController) -> Int {
+//		return pages.count
+//	}
+//
+//	func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+//		return 0
+//	}
 }

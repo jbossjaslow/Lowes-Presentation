@@ -16,22 +16,15 @@ class JoshPageViewController: UIPageViewController, Storyboarded {
         super.viewDidLoad()
 		
 		self.view.backgroundColor = .systemPink
-//		for view in self.view.subviews {
-//			if view.isKind(of:UIScrollView.self) {
-//				view.frame = UIScreen.main.bounds
-//			} else if view.isKind(of:UIPageControl.self) {
-//				view.backgroundColor = UIColor.clear
-//			}
-//		}
-
-//		guard let vm = viewModel else { return }
-//		pageControl = UIPageControl(frame: .init(x: 0, y: 300, width: 100, height: 50))
-//		pageControl.numberOfPages = vm.pages.count
-//		pageControl.currentPage = 0
-//		pageControl.tintColor = .white
-//		pageControl.currentPageIndicatorTintColor = .white
-//		pageControl.pageIndicatorTintColor = .black
-//		view.addSubview(pageControl)
+		
+		guard let vm = viewModel else { return }
+		addSubview(vm.formatPageControl())
     }
 
+}
+
+extension JoshPageViewController {
+	func addSubview(_ view: UIView) {
+		self.view.addSubview(view)
+	}
 }
