@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AVKit
 
-class Page1ViewController: UIViewController, Storyboarded {
+class VideoPage1ViewController: AVPlayerViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,4 +27,8 @@ class Page1ViewController: UIViewController, Storyboarded {
     }
     */
 
+}
+
+extension VideoPage1ViewController: AVPlayerViewControllerDelegate {
+	
 }

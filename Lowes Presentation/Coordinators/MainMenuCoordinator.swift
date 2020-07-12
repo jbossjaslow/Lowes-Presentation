@@ -9,11 +9,13 @@
 import UIKit
 
 class MainMenuCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
+	weak var parentCoordinator: Coordinator?
 	var childCoordinators = [Coordinator]()
 	var navigationController: UINavigationController
 	
-	init(navigationController: UINavigationController) {
+	required init(navigationController: UINavigationController, parentCoordinator: Coordinator?) {
 		self.navigationController = navigationController
+		self.parentCoordinator = parentCoordinator
 	}
 	
 	func start() {
@@ -24,8 +26,8 @@ class MainMenuCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 	}
 	
 	func showJoshPages() {
-		let child = PageViewControllerCoordinator(navigationController: navigationController)
-		child.parentCoordinator = self
+		let child = PageViewControllerCoordinator(navigationController: navigationController,
+												  parentCoordinator: self)
 		childCoordinators.append(child)
 		child.start()
 	}
