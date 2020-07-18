@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let window = UIWindow(windowScene: scene)
 				
 		let navController = UINavigationController()
-		coordinator = MainMenuCoordinator(navigationController: navController)
+		coordinator = MainMenuCoordinator(navigationController: navController, parentCoordinator: nil)
 		coordinator?.start()
 		
 		window.rootViewController = navController

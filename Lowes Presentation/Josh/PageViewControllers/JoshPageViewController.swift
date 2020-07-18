@@ -19,6 +19,7 @@ class JoshPageViewController: UIPageViewController, Storyboarded {
 		
 		guard let vm = viewModel else { return }
 		addSubview(vm.formatPageControl())
+		edgesForExtendedLayout.remove(.top)
     }
 
 }
