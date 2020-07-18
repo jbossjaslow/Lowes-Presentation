@@ -8,7 +8,9 @@
         <!--AV Player View Controller-->
         <scene sceneID="RZW-39-EeD">
             <objects>
-                <avPlayerViewController storyboardIdentifier="VideoPage1ViewController" videoGravity="AVLayerVideoGravityResizeAspect" id="fkW-7r-WxO" customClass="VideoPage1ViewController" customModule="Lowes_Presentation" customModuleProvider="target" sceneMemberID="viewController"/>
+                <avPlayerViewController storyboardIdentifier="VideoPage1ViewController" videoGravity="AVLayerVideoGravityResizeAspectFill" id="fkW-7r-WxO" customClass="VideoPage1ViewController" customModule="Lowes_Presentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HB-EJ-bzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-687" y="91"/>
