@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3971C55924C3B653008D473A /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3971C55824C3B653008D473A /* MainMenuViewModel.swift */; };
 		3975E93224B944F70030EB79 /* VideoPage1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3975E93124B944F70030EB79 /* VideoPage1ViewModel.swift */; };
 		3975E93424B9478B0030EB79 /* Curbside Pickup - Final Presentation.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3975E93324B9478B0030EB79 /* Curbside Pickup - Final Presentation.mov */; };
 		3975E93724BBBABD0030EB79 /* VideoPage1Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3975E93624BBBABD0030EB79 /* VideoPage1Coordinator.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3971C55824C3B653008D473A /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		3975E93124B944F70030EB79 /* VideoPage1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPage1ViewModel.swift; sourceTree = "<group>"; };
 		3975E93324B9478B0030EB79 /* Curbside Pickup - Final Presentation.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Curbside Pickup - Final Presentation.mov"; sourceTree = "<group>"; };
 		3975E93624BBBABD0030EB79 /* VideoPage1Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPage1Coordinator.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3999B1AC24AAC63F00428F3A /* MainMenuViewController.swift */,
+				3971C55824C3B653008D473A /* MainMenuViewModel.swift */,
 				3999B1AE24AAC63F00428F3A /* MainMenuViewController.storyboard */,
 			);
 			path = "Main Menu";
@@ -397,6 +400,7 @@
 				39D0243F24B0DBC400235682 /* PageViewControllerCoordinator.swift in Sources */,
 				3975E93724BBBABD0030EB79 /* VideoPage1Coordinator.swift in Sources */,
 				3999B1AB24AAC63F00428F3A /* SceneDelegate.swift in Sources */,
+				3971C55924C3B653008D473A /* MainMenuViewModel.swift in Sources */,
 				39D0244F24B10DF100235682 /* JoshPageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

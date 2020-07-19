@@ -9,11 +9,24 @@
 import UIKit
 
 class MainMenuViewController: UIViewController, Storyboarded {
+	
+	@IBOutlet weak var JoshButton: UIButton!
+	@IBOutlet weak var JasmineButton: UIButton!
+	
 	weak var coordinator: MainMenuCoordinator?
+	var viewModel: MainMenuViewModel?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		
+		addShadows()
+	}
+	
+	func addShadows() {
+		guard let coord = coordinator else { return }
+		
+		coord.addShadow(for: JoshButton, JasmineButton)
 	}
 
 	@IBAction func testButton(_ sender: UIButton) {
