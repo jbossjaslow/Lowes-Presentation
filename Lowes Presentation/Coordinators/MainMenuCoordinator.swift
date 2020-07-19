@@ -12,6 +12,7 @@ class MainMenuCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 	weak var parentCoordinator: Coordinator?
 	var childCoordinators = [Coordinator]()
 	var navigationController: UINavigationController
+	var viewModel: MainMenuViewModel?
 	
 	required init(navigationController: UINavigationController, parentCoordinator: Coordinator?) {
 		self.navigationController = navigationController
@@ -21,8 +22,21 @@ class MainMenuCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 	func start() {
 		navigationController.delegate = self
 		let vc = MainMenuViewController.instantiate()
+		let vm = MainMenuViewModel(viewController: vc,
+								   coordinator: self)
+		vc.viewModel = vm
+		self.viewModel = vm
 		vc.coordinator = self
 		navigationController.pushViewController(vc, animated: false)
+	}
+	
+	func addShadow(for buttons: UIButton...) {
+		guard let vm = viewModel else { return }
+		
+		buttons.forEach {
+			vm.addShadow(for: $0)
+		} //Cannot pass array of type '[UIButton]' as variadic arguments of type 'UIButton' --> Unfortunately can't pass 1 variadic function into another
+		
 	}
 	
 	func showJoshPages() {

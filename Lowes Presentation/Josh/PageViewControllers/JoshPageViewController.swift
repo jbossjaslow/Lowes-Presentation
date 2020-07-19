@@ -15,7 +15,7 @@ class JoshPageViewController: UIPageViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		self.view.backgroundColor = .systemPink
+		self.view.backgroundColor = UIColor(named: "Background")
 		
 		guard let vm = viewModel else { return }
 		addSubview(vm.formatPageControl())
