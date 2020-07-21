@@ -9,11 +9,34 @@
 import UIKit
 
 class MainMenuViewController: UIViewController, Storyboarded {
+	
+	@IBOutlet weak var JoshButton: UIButton!
+	@IBOutlet weak var JasmineButton: UIButton!
+	
 	weak var coordinator: MainMenuCoordinator?
+	var viewModel: MainMenuViewModel?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		
+		addShadows()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		coordinator?.navigationController.setNavigationBarHidden(false, animated: animated)
+	}
+	
+	func addShadows() {
+		guard let coord = coordinator else { return }
+		
+		coord.addShadow(for: JoshButton, JasmineButton)
 	}
 
 	@IBAction func testButton(_ sender: UIButton) {

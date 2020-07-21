@@ -9,21 +9,17 @@
 import UIKit
 
 class JoshPageViewModel: NSObject {
-	
+	weak var coordinator: PageViewControllerCoordinator?
 	weak var viewController: JoshPageViewController?
 	var pageControl = UIPageControl()
 	
 	var infiniteSwipe: Bool = true
 	
-	lazy var pages: [UIViewController] = {
-		return [
-			Page1ViewController.instantiate(),
-			Page2ViewController.instantiate()
-		]
-	}()
+	var pages: [UIViewController] = []
 	
-	init(viewController: JoshPageViewController?) {
+	init(viewController: JoshPageViewController?, pages: [UIViewController], coordinator: PageViewControllerCoordinator) {
 		super.init()
+		self.pages = pages
 		guard let vc = viewController,
 			let initialVC = pages.first else {
 			fatalError("No view controllers set for page view controller")
@@ -32,22 +28,26 @@ class JoshPageViewModel: NSObject {
 							  direction: .forward,
 							  animated: true,
 							  completion: nil)
-		self.viewController = viewController
+		self.viewController = vc
+		self.coordinator = coordinator
+		vc.title = "Curbside Pickup"
 	}
 }
 
 extension JoshPageViewModel {
 	func formatPageControl() -> UIPageControl {
 		guard let vc = viewController else { return UIPageControl() }
+		let yPos: CGFloat = 62.5 + vc.topbarHeight
 		let pc = UIPageControl(frame: .init(x: 0,
-											y: vc.view.frame.maxY - 50,
+											y: vc.view.frame.maxY - yPos,
 											width: vc.view.frame.width,
-											height: 50))
+											height: 0))
 		pc.numberOfPages = pages.count
 		pc.currentPage = 0
 		pc.tintColor = .white
 		pc.currentPageIndicatorTintColor = .white
-		pc.pageIndicatorTintColor = .black
+		pc.pageIndicatorTintColor = .gray
+		pc.isUserInteractionEnabled = false
 		pageControl = pc
 		return pageControl
 	}
@@ -84,15 +84,17 @@ extension JoshPageViewModel: UIPageViewControllerDelegate, UIPageViewControllerD
 	
 	func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
 		guard let shownVC = pageViewController.viewControllers?[0],
-			let position = pages.firstIndex(of: shownVC) else { return }
+			let position = pages.firstIndex(of: shownVC), let vc = viewController else { return }
 		pageControl.currentPage = position
+		switch position {
+		case 0:
+			vc.title = "Curbside Pickup"
+		case 1:
+			vc.title = "Display Name and Price"
+		case 2:
+			vc.title = "Backend Accomplishments"
+		default:
+			vc.title = "This should not display"
+		}
 	}
-	
-//	func presentationCount(for pageViewController: UIPageViewController) -> Int {
-//		return pages.count
-//	}
-//
-//	func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-//		return 0
-//	}
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+    </dependencies>
+    <scenes>
+        <!--AV Player View Controller-->
+        <scene sceneID="RZW-39-EeD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0HB-EJ-bzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController storyboardIdentifier="VideoPage1ViewController" videoGravity="AVLayerVideoGravityResizeAspectFill" id="fkW-7r-WxO" customClass="VideoPage1ViewController" customModule="Lowes_Presentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                </avPlayerViewController>
+            </objects>
+            <point key="canvasLocation" x="-687" y="91"/>
+        </scene>
+    </scenes>
+</document>

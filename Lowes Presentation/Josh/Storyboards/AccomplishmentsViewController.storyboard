@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bvo-GP-oc9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Accomplishments View Controller-->
+        <scene sceneID="7K2-Xc-WjY">
+            <objects>
+                <viewController storyboardIdentifier="AccomplishmentsViewController" id="bvo-GP-oc9" customClass="AccomplishmentsViewController" customModule="Lowes_Presentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xy0-xc-6i9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eNG-1R-UPK">
+                                <rect key="frame" x="70" y="186" width="274" height="32"/>
+                                <color key="backgroundColor" name="Feature Blue"/>
+                                <segments>
+                                    <segment title="WCS -&gt; GCP"/>
+                                    <segment title="Defects"/>
+                                </segments>
+                                <connections>
+                                    <action selector="accomplishmentValueChanged:" destination="bvo-GP-oc9" eventType="valueChanged" id="Hjn-SW-deT"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-5G-nvL">
+                                <rect key="frame" x="8" y="225" width="398" height="645"/>
+                                <color key="backgroundColor" name="Feature Blue"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bullet Cell" id="L9A-yx-ViT" customClass="AccomplishmentsTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="398" height="46.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9A-yx-ViT" id="Huk-1D-rSA">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="46.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-Hf-sMo" userLabel="Accomplishment Label">
+                                                    <rect key="frame" x="20" y="11" width="358" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="Feature Blue"/>
+                                            <constraints>
+                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="bottom" secondItem="Huk-1D-rSA" secondAttribute="bottomMargin" id="CQe-qh-xE2"/>
+                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="top" secondItem="Huk-1D-rSA" secondAttribute="topMargin" id="Vd4-BS-4Fw"/>
+                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="leading" secondItem="Huk-1D-rSA" secondAttribute="leadingMargin" id="XXS-Ox-8mt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bd1-Hf-sMo" secondAttribute="trailing" id="tns-pN-Bjx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="accomplishmentLabel" destination="bd1-Hf-sMo" id="UOr-DC-bgv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="eNG-1R-UPK" firstAttribute="top" secondItem="B8Q-kc-tzS" secondAttribute="top" constant="98" id="Bbs-CP-hvI"/>
+                            <constraint firstItem="B8Q-kc-tzS" firstAttribute="trailing" secondItem="TQg-5G-nvL" secondAttribute="trailing" constant="8" id="GdP-Dn-qGH"/>
+                            <constraint firstItem="TQg-5G-nvL" firstAttribute="leading" secondItem="B8Q-kc-tzS" secondAttribute="leading" constant="8" id="IH0-gd-5mn"/>
+                            <constraint firstItem="TQg-5G-nvL" firstAttribute="top" secondItem="eNG-1R-UPK" secondAttribute="bottom" constant="8" id="Yh7-4p-HRP"/>
+                            <constraint firstItem="B8Q-kc-tzS" firstAttribute="trailing" secondItem="eNG-1R-UPK" secondAttribute="trailing" constant="70" id="bEk-oL-Gm0"/>
+                            <constraint firstItem="TQg-5G-nvL" firstAttribute="bottom" secondItem="B8Q-kc-tzS" secondAttribute="bottom" constant="8" id="hY8-6k-Vr5"/>
+                            <constraint firstItem="eNG-1R-UPK" firstAttribute="leading" secondItem="B8Q-kc-tzS" secondAttribute="leading" constant="70" id="sc7-0N-EPQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B8Q-kc-tzS"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="accomplishmentSegmentedControl" destination="eNG-1R-UPK" id="8Uc-MI-Y88"/>
+                        <outlet property="tableView" destination="TQg-5G-nvL" id="T26-xk-Fl6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5r-7J-s1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.89399999380111694" green="0.875" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Feature Blue">
+            <color red="0.25900000333786011" green="0.50599998235702515" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
