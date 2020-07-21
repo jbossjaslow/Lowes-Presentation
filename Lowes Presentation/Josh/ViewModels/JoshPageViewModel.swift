@@ -28,7 +28,7 @@ class JoshPageViewModel: NSObject {
 							  direction: .forward,
 							  animated: true,
 							  completion: nil)
-		self.viewController = viewController
+		self.viewController = vc
 		self.coordinator = coordinator
 		vc.title = "Curbside Pickup"
 	}
@@ -37,15 +37,16 @@ class JoshPageViewModel: NSObject {
 extension JoshPageViewModel {
 	func formatPageControl() -> UIPageControl {
 		guard let vc = viewController else { return UIPageControl() }
+		let yPos: CGFloat = 62.5 + vc.topbarHeight
 		let pc = UIPageControl(frame: .init(x: 0,
-											y: vc.view.frame.maxY - 50,
+											y: vc.view.frame.maxY - yPos,
 											width: vc.view.frame.width,
-											height: 50))
+											height: 0))
 		pc.numberOfPages = pages.count
 		pc.currentPage = 0
 		pc.tintColor = .white
 		pc.currentPageIndicatorTintColor = .white
-		pc.pageIndicatorTintColor = .black
+		pc.pageIndicatorTintColor = .gray
 		pc.isUserInteractionEnabled = false
 		pageControl = pc
 		return pageControl
@@ -89,7 +90,9 @@ extension JoshPageViewModel: UIPageViewControllerDelegate, UIPageViewControllerD
 		case 0:
 			vc.title = "Curbside Pickup"
 		case 1:
-			vc.title = "Hello World"
+			vc.title = "Display Name and Price"
+		case 2:
+			vc.title = "Backend Accomplishments"
 		default:
 			vc.title = "This should not display"
 		}
