@@ -1,0 +1,14 @@
+{
+	"GCP": [
+		"Hello",
+		"World",
+		"Goodbye",
+		"Code"
+	],
+	"defects": [
+		"Defect 1",
+		"Defect 2",
+		"Defect 3",
+		"Defect 4"
+	]
+}

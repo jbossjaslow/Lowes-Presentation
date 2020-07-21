@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Page2 View Controller-->
+        <!--Accomplishments View Controller-->
         <scene sceneID="7K2-Xc-WjY">
             <objects>
-                <viewController storyboardIdentifier="Page2ViewController" id="bvo-GP-oc9" customClass="Page2ViewController" customModule="Lowes_Presentation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccomplishmentsViewController" id="bvo-GP-oc9" customClass="AccomplishmentsViewController" customModule="Lowes_Presentation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xy0-xc-6i9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,29 +23,43 @@
                                     <segment title="WCS -&gt; GCP"/>
                                     <segment title="Defects"/>
                                 </segments>
+                                <connections>
+                                    <action selector="accomplishmentValueChanged:" destination="bvo-GP-oc9" eventType="valueChanged" id="Hjn-SW-deT"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-5G-nvL">
                                 <rect key="frame" x="8" y="225" width="398" height="645"/>
                                 <color key="backgroundColor" name="Feature Blue"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bullet Cell" rowHeight="83" id="L9A-yx-ViT">
-                                        <rect key="frame" x="0.0" y="28" width="398" height="83"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bullet Cell" id="L9A-yx-ViT" customClass="AccomplishmentsTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="398" height="62.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9A-yx-ViT" id="Huk-1D-rSA">
-                                            <rect key="frame" x="0.0" y="0.0" width="398" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="62.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-Hf-sMo">
-                                                    <rect key="frame" x="20" y="11" width="334" height="61"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-Hf-sMo" userLabel="Accomplishment Label">
+                                                    <rect key="frame" x="20" y="11" width="358" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Z0O-Nr-ZHD"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" name="Feature Blue"/>
+                                            <constraints>
+                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="bottom" secondItem="Huk-1D-rSA" secondAttribute="bottomMargin" id="CQe-qh-xE2"/>
+                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="top" secondItem="Huk-1D-rSA" secondAttribute="topMargin" id="Vd4-BS-4Fw"/>
+                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="leading" secondItem="Huk-1D-rSA" secondAttribute="leadingMargin" id="W2f-b4-CHi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bd1-Hf-sMo" secondAttribute="trailing" id="tns-pN-Bjx"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="accomplishmentLabel" destination="bd1-Hf-sMo" id="UOr-DC-bgv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -63,6 +77,10 @@
                         <viewLayoutGuide key="safeArea" id="B8Q-kc-tzS"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="accomplishmentSegmentedControl" destination="eNG-1R-UPK" id="8Uc-MI-Y88"/>
+                        <outlet property="tableView" destination="TQg-5G-nvL" id="T26-xk-Fl6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5r-7J-s1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

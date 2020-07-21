@@ -23,7 +23,8 @@ class PageViewControllerCoordinator: NSObject, Coordinator {
 //		navigationController.delegate = self
 		let pages = [
 			showVideoPage1(),
-			Page2ViewController.instantiate()
+			showVideoPage2(),
+			showAccomplishments()
 		]
 		
 		let vc = JoshPageViewController.instantiate()
@@ -44,5 +45,21 @@ class PageViewControllerCoordinator: NSObject, Coordinator {
 		childCoordinators.append(child)
 		child.start()
 		return child.shownVC
+	}
+	
+	func showVideoPage2() -> UIViewController {
+		let child = VideoPage2Coordinator(navigationController: navigationController,
+										  parentCoordinator: self)
+		childCoordinators.append(child)
+		child.start()
+		return child.shownVC
+	}
+	
+	func showAccomplishments() -> UIViewController {
+		let child = AccomplishmentsCoordinator(navigationController: navigationController,
+										  parentCoordinator: self)
+		childCoordinators.append(child)
+		child.start()
+		return child.shownVC ?? AccomplishmentsViewController()
 	}
 }
