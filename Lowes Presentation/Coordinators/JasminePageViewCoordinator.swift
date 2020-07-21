@@ -13,8 +13,9 @@ class JasminePageViewControllerCoordinator: NSObject, Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+	required init(navigationController: UINavigationController, parentCoordinator: Coordinator?) {
         self.navigationController = navigationController
+		self.parentCoordinator = parentCoordinator
     }
     
     func start() {
