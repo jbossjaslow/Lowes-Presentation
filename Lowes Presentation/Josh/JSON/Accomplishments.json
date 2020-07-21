@@ -1,14 +1,22 @@
 {
 	"GCP": [
-		"Hello",
-		"World",
-		"Goodbye",
-		"Code"
+		"Unit Tests",
+		"Curbside Pickup/Phase 3",
+		"Truck Delivery",
+		"Fixed Promotions",
+		"Verification - Cart populates correctly",
+		"EPP & RP - selecting options and \"No Thanks\"",
+		"SFL prices"
 	],
 	"defects": [
-		"Defect 1",
-		"Defect 2",
-		"Defect 3",
-		"Defect 4"
+		"Logo issue",
+		"Voiceovers/Accessiblity",
+		"Adobe Analytics",
+		"Broken Tests",
+		"Account tab crash identification",
+		"Token Crash",
+		"Continue Shopping Button Missing",
+		"\"Save\" doesn't appear in cart",
+		"Currency & percentage formatting issues"
 	]
 }
