@@ -24,7 +24,7 @@ class MainMenuViewController: UIViewController, Storyboarded {
 		case "Josh":
 			coordinator?.showJoshPages()
 		case "Jasmine":
-			print(buttonText)
+            coordinator?.showJasminePages()
 		default:
 			print("Button has no text")
 		}

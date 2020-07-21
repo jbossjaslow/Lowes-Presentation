@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Jasmine Page1 View Controller-->
+        <scene sceneID="bc0-ab-TqF">
+            <objects>
+                <viewController storyboardIdentifier="JasminePage1ViewController" id="i8O-hg-kUB" customClass="JasminePage1ViewController" customModule="Lowes_Presentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JkX-Md-YhH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-ou-SV5" userLabel="ChangeButton" customClass="JasmineButton" customModule="Lowes_Presentation" customModuleProvider="target">
+                                <rect key="frame" x="20" y="314" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kJf-41-tIK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Change Text Color"/>
+                                <connections>
+                                    <action selector="changeButtonTapped:" destination="i8O-hg-kUB" eventType="touchUpInside" id="abW-z2-ij2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AR-Wm-gJa" userLabel="HideButton" customClass="JasmineButton" customModule="Lowes_Presentation" customModuleProvider="target">
+                                <rect key="frame" x="20" y="244" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="d6q-z7-ZcI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Hide/Show Text"/>
+                                <connections>
+                                    <action selector="myButtonTapped:" destination="i8O-hg-kUB" eventType="touchUpInside" id="nLR-KT-gw6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIButtons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgz-jq-6X1">
+                                <rect key="frame" x="20" y="117" width="250" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~hello world~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlx-h9-wiJ" userLabel="myLabel">
+                                <rect key="frame" x="20" y="705" width="374" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KVR-7j-fIg" firstAttribute="bottom" secondItem="hlx-h9-wiJ" secondAttribute="bottom" constant="120" id="BaK-pT-1Qc"/>
+                            <constraint firstItem="KVR-7j-fIg" firstAttribute="trailing" secondItem="7AR-Wm-gJa" secondAttribute="trailing" constant="20" id="C9Y-TB-989"/>
+                            <constraint firstItem="KVR-7j-fIg" firstAttribute="trailing" secondItem="Mry-ou-SV5" secondAttribute="trailing" constant="20" id="FGZ-A8-eKF"/>
+                            <constraint firstItem="Xgz-jq-6X1" firstAttribute="leading" secondItem="KVR-7j-fIg" secondAttribute="leading" constant="20" id="PKz-4i-RBP"/>
+                            <constraint firstItem="KVR-7j-fIg" firstAttribute="trailing" secondItem="Xgz-jq-6X1" secondAttribute="trailing" constant="144" id="UF3-Jd-i36"/>
+                            <constraint firstItem="Xgz-jq-6X1" firstAttribute="top" secondItem="KVR-7j-fIg" secondAttribute="top" constant="73" id="VJZ-h7-uXs"/>
+                            <constraint firstItem="KVR-7j-fIg" firstAttribute="trailing" secondItem="hlx-h9-wiJ" secondAttribute="trailing" constant="20" id="WcA-0k-KBJ"/>
+                            <constraint firstItem="7AR-Wm-gJa" firstAttribute="leading" secondItem="KVR-7j-fIg" secondAttribute="leading" constant="20" id="aqo-ap-BZy"/>
+                            <constraint firstItem="hlx-h9-wiJ" firstAttribute="leading" secondItem="KVR-7j-fIg" secondAttribute="leading" constant="20" id="fHt-EQ-Qis"/>
+                            <constraint firstItem="7AR-Wm-gJa" firstAttribute="top" secondItem="KVR-7j-fIg" secondAttribute="top" constant="200" id="h6K-2E-pTh"/>
+                            <constraint firstItem="7AR-Wm-gJa" firstAttribute="top" secondItem="Xgz-jq-6X1" secondAttribute="bottom" constant="104" id="i9t-GY-4Zy"/>
+                            <constraint firstItem="Mry-ou-SV5" firstAttribute="top" secondItem="7AR-Wm-gJa" secondAttribute="bottom" constant="20" id="nZV-a8-oRN"/>
+                            <constraint firstItem="Mry-ou-SV5" firstAttribute="leading" secondItem="KVR-7j-fIg" secondAttribute="leading" constant="20" id="wan-X6-3cc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KVR-7j-fIg"/>
+                    </view>
+                    <connections>
+                        <outlet property="emojiLabel" destination="hlx-h9-wiJ" id="qMr-M1-i8p"/>
+                        <outlet property="myButton" destination="7AR-Wm-gJa" id="zfu-cC-z6r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MdP-TH-1uU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+</document>
