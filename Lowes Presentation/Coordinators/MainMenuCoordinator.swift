@@ -45,6 +45,13 @@ class MainMenuCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 		childCoordinators.append(child)
 		child.start()
 	}
+    
+    func showJasminePages() {
+        let child = JasminePageViewControllerCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+    }
 	
 	func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
 		guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
