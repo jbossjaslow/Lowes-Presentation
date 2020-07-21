@@ -48,7 +48,7 @@ extension AccomplishmentsViewModel: UITableViewDelegate, UITableViewDataSource {
 		guard let currAcc = currentAccomplishments else { return UITableViewCell() }
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Bullet Cell", for: indexPath) as! AccomplishmentsTableViewCell
 		
-		cell.accomplishmentLabel.text = currAcc[indexPath.row]
+		cell.accomplishmentLabel.text = "• " + currAcc[indexPath.row]
 		
 		return cell
 	}

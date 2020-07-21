@@ -27,24 +27,21 @@
                                     <action selector="accomplishmentValueChanged:" destination="bvo-GP-oc9" eventType="valueChanged" id="Hjn-SW-deT"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-5G-nvL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-5G-nvL">
                                 <rect key="frame" x="8" y="225" width="398" height="645"/>
                                 <color key="backgroundColor" name="Feature Blue"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bullet Cell" id="L9A-yx-ViT" customClass="AccomplishmentsTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="398" height="62.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="398" height="46.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9A-yx-ViT" id="Huk-1D-rSA">
-                                            <rect key="frame" x="0.0" y="0.0" width="398" height="62.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-Hf-sMo" userLabel="Accomplishment Label">
-                                                    <rect key="frame" x="20" y="11" width="358" height="40.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="Z0O-Nr-ZHD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-Hf-sMo" userLabel="Accomplishment Label">
+                                                    <rect key="frame" x="20" y="11" width="358" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -53,7 +50,7 @@
                                             <constraints>
                                                 <constraint firstItem="bd1-Hf-sMo" firstAttribute="bottom" secondItem="Huk-1D-rSA" secondAttribute="bottomMargin" id="CQe-qh-xE2"/>
                                                 <constraint firstItem="bd1-Hf-sMo" firstAttribute="top" secondItem="Huk-1D-rSA" secondAttribute="topMargin" id="Vd4-BS-4Fw"/>
-                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="leading" secondItem="Huk-1D-rSA" secondAttribute="leadingMargin" id="W2f-b4-CHi"/>
+                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="leading" secondItem="Huk-1D-rSA" secondAttribute="leadingMargin" id="XXS-Ox-8mt"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bd1-Hf-sMo" secondAttribute="trailing" id="tns-pN-Bjx"/>
                                             </constraints>
                                         </tableViewCellContentView>

@@ -23,6 +23,16 @@ class MainMenuViewController: UIViewController, Storyboarded {
 		addShadows()
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		coordinator?.navigationController.setNavigationBarHidden(false, animated: animated)
+	}
+	
 	func addShadows() {
 		guard let coord = coordinator else { return }
 		
