@@ -17,10 +17,10 @@ class MainMenuViewModel: NSObject {
 		self.coordinator = coordinator
 	}
 	
-	func addShadow(for button: UIButton) {
-		button.layer.shadowColor = UIColor.lightGray.cgColor
-		button.layer.shadowOpacity = 1
-		button.layer.shadowOffset = .init(width: 0, height: 4)
-		button.layer.shadowRadius = 1
+	func addShadow(for view: UIView) {
+		view.layer.shadowColor = UIColor.lightGray.cgColor
+		view.layer.shadowOpacity = 1
+		view.layer.shadowOffset = .init(width: 0, height: 4)
+		view.layer.shadowRadius = 1
 	}
 }

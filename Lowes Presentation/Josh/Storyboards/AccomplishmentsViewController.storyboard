@@ -16,89 +16,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eNG-1R-UPK">
-                                <rect key="frame" x="70" y="186" width="274" height="32"/>
-                                <color key="backgroundColor" name="Feature Blue"/>
-                                <segments>
-                                    <segment title="WCS -&gt; GCP"/>
-                                    <segment title="Defects"/>
-                                </segments>
-                                <connections>
-                                    <action selector="accomplishmentValueChanged:" destination="bvo-GP-oc9" eventType="valueChanged" id="Hjn-SW-deT"/>
-                                </connections>
-                            </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-5G-nvL">
-                                <rect key="frame" x="8" y="225" width="398" height="645"/>
-                                <color key="backgroundColor" name="Feature Blue"/>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bullet Cell" id="L9A-yx-ViT" customClass="AccomplishmentsTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="398" height="47"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9A-yx-ViT" id="Huk-1D-rSA">
-                                            <rect key="frame" x="0.0" y="0.0" width="398" height="46.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-Hf-sMo" userLabel="Accomplishment Label">
-                                                    <rect key="frame" x="20" y="11" width="358" height="24.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" name="Feature Blue"/>
-                                            <constraints>
-                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="bottom" secondItem="Huk-1D-rSA" secondAttribute="bottomMargin" id="CQe-qh-xE2"/>
-                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="top" secondItem="Huk-1D-rSA" secondAttribute="topMargin" id="Vd4-BS-4Fw"/>
-                                                <constraint firstItem="bd1-Hf-sMo" firstAttribute="leading" secondItem="Huk-1D-rSA" secondAttribute="leadingMargin" id="XXS-Ox-8mt"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="bd1-Hf-sMo" secondAttribute="trailing" id="tns-pN-Bjx"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnB-Gg-UBT" userLabel="Container Segment View">
+                                <rect key="frame" x="70" y="186" width="274" height="31"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eNG-1R-UPK">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="32"/>
+                                        <color key="backgroundColor" name="Feature Blue"/>
+                                        <segments>
+                                            <segment title="WCS -&gt; GCP"/>
+                                            <segment title="Defects"/>
+                                        </segments>
                                         <connections>
-                                            <outlet property="accomplishmentLabel" destination="bd1-Hf-sMo" id="UOr-DC-bgv"/>
+                                            <action selector="accomplishmentValueChanged:" destination="bvo-GP-oc9" eventType="valueChanged" id="Hjn-SW-deT"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Image Cell" id="VpR-Vp-0eI" customClass="ImageTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="74.5" width="398" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VpR-Vp-0eI" id="ZYb-xL-gdr">
-                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Y0-Cn-tXF">
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="eNG-1R-UPK" firstAttribute="top" secondItem="ZnB-Gg-UBT" secondAttribute="top" id="22p-kE-eet"/>
+                                    <constraint firstAttribute="trailing" secondItem="eNG-1R-UPK" secondAttribute="trailing" id="FjN-dt-2mO"/>
+                                    <constraint firstAttribute="bottom" secondItem="eNG-1R-UPK" secondAttribute="bottom" id="Oel-W6-YB8"/>
+                                    <constraint firstItem="eNG-1R-UPK" firstAttribute="leading" secondItem="ZnB-Gg-UBT" secondAttribute="leading" id="ztO-jQ-bYb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHk-mL-KnC" userLabel="Container Table View">
+                                <rect key="frame" x="8" y="233" width="398" height="621"/>
+                                <subviews>
+                                    <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-5G-nvL">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="621"/>
+                                        <color key="backgroundColor" name="Feature Blue"/>
+                                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bullet Cell" id="L9A-yx-ViT" customClass="AccomplishmentsTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="398" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9A-yx-ViT" id="Huk-1D-rSA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="46.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-Hf-sMo" userLabel="Accomplishment Label">
+                                                            <rect key="frame" x="20" y="11" width="358" height="24.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="Feature Blue"/>
+                                                    <constraints>
+                                                        <constraint firstItem="bd1-Hf-sMo" firstAttribute="bottom" secondItem="Huk-1D-rSA" secondAttribute="bottomMargin" id="CQe-qh-xE2"/>
+                                                        <constraint firstItem="bd1-Hf-sMo" firstAttribute="top" secondItem="Huk-1D-rSA" secondAttribute="topMargin" id="Vd4-BS-4Fw"/>
+                                                        <constraint firstItem="bd1-Hf-sMo" firstAttribute="leading" secondItem="Huk-1D-rSA" secondAttribute="leadingMargin" id="XXS-Ox-8mt"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="bd1-Hf-sMo" secondAttribute="trailing" id="tns-pN-Bjx"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="accomplishmentLabel" destination="bd1-Hf-sMo" id="UOr-DC-bgv"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Image Cell" id="VpR-Vp-0eI" customClass="ImageTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="74.5" width="398" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VpR-Vp-0eI" id="ZYb-xL-gdr">
                                                     <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="9Y0-Cn-tXF" firstAttribute="top" secondItem="ZYb-xL-gdr" secondAttribute="top" id="4D1-r1-Q6s"/>
-                                                <constraint firstAttribute="trailing" secondItem="9Y0-Cn-tXF" secondAttribute="trailing" id="9mf-Cx-Iym"/>
-                                                <constraint firstAttribute="bottom" secondItem="9Y0-Cn-tXF" secondAttribute="bottom" id="blD-xp-7MR"/>
-                                                <constraint firstItem="9Y0-Cn-tXF" firstAttribute="leading" secondItem="ZYb-xL-gdr" secondAttribute="leading" id="rK4-js-ex5"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="imageAccomplishView" destination="9Y0-Cn-tXF" id="0j2-ru-pyu"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Y0-Cn-tXF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="9Y0-Cn-tXF" firstAttribute="top" secondItem="ZYb-xL-gdr" secondAttribute="top" id="4D1-r1-Q6s"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9Y0-Cn-tXF" secondAttribute="trailing" id="9mf-Cx-Iym"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9Y0-Cn-tXF" secondAttribute="bottom" id="blD-xp-7MR"/>
+                                                        <constraint firstItem="9Y0-Cn-tXF" firstAttribute="leading" secondItem="ZYb-xL-gdr" secondAttribute="leading" id="rK4-js-ex5"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="imageAccomplishView" destination="9Y0-Cn-tXF" id="0j2-ru-pyu"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="TQg-5G-nvL" firstAttribute="top" secondItem="bHk-mL-KnC" secondAttribute="top" id="Lsy-gs-rPO"/>
+                                    <constraint firstAttribute="bottom" secondItem="TQg-5G-nvL" secondAttribute="bottom" id="YIs-6o-2TX"/>
+                                    <constraint firstAttribute="trailing" secondItem="TQg-5G-nvL" secondAttribute="trailing" id="e2R-Gw-aff"/>
+                                    <constraint firstItem="TQg-5G-nvL" firstAttribute="leading" secondItem="bHk-mL-KnC" secondAttribute="leading" id="wWS-3c-rQK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="eNG-1R-UPK" firstAttribute="top" secondItem="B8Q-kc-tzS" secondAttribute="top" constant="98" id="Bbs-CP-hvI"/>
-                            <constraint firstItem="B8Q-kc-tzS" firstAttribute="trailing" secondItem="TQg-5G-nvL" secondAttribute="trailing" constant="8" id="GdP-Dn-qGH"/>
-                            <constraint firstItem="TQg-5G-nvL" firstAttribute="leading" secondItem="B8Q-kc-tzS" secondAttribute="leading" constant="8" id="IH0-gd-5mn"/>
-                            <constraint firstItem="TQg-5G-nvL" firstAttribute="top" secondItem="eNG-1R-UPK" secondAttribute="bottom" constant="8" id="Yh7-4p-HRP"/>
-                            <constraint firstItem="B8Q-kc-tzS" firstAttribute="trailing" secondItem="eNG-1R-UPK" secondAttribute="trailing" constant="70" id="bEk-oL-Gm0"/>
-                            <constraint firstItem="TQg-5G-nvL" firstAttribute="bottom" secondItem="B8Q-kc-tzS" secondAttribute="bottom" constant="8" id="hY8-6k-Vr5"/>
-                            <constraint firstItem="eNG-1R-UPK" firstAttribute="leading" secondItem="B8Q-kc-tzS" secondAttribute="leading" constant="70" id="sc7-0N-EPQ"/>
+                            <constraint firstItem="ZnB-Gg-UBT" firstAttribute="leading" secondItem="B8Q-kc-tzS" secondAttribute="leading" constant="70" id="0z5-AE-eVj"/>
+                            <constraint firstItem="bHk-mL-KnC" firstAttribute="leading" secondItem="B8Q-kc-tzS" secondAttribute="leading" constant="8" id="22b-bY-nxm"/>
+                            <constraint firstItem="B8Q-kc-tzS" firstAttribute="bottom" secondItem="bHk-mL-KnC" secondAttribute="bottom" constant="8" id="5NE-dn-uLC"/>
+                            <constraint firstItem="ZnB-Gg-UBT" firstAttribute="top" secondItem="B8Q-kc-tzS" secondAttribute="top" constant="98" id="KLg-Tn-Ppi"/>
+                            <constraint firstItem="bHk-mL-KnC" firstAttribute="top" secondItem="ZnB-Gg-UBT" secondAttribute="bottom" constant="16" id="MAe-Tr-kQY"/>
+                            <constraint firstItem="B8Q-kc-tzS" firstAttribute="trailing" secondItem="bHk-mL-KnC" secondAttribute="trailing" constant="8" id="TGS-ws-yO1"/>
+                            <constraint firstItem="B8Q-kc-tzS" firstAttribute="trailing" secondItem="ZnB-Gg-UBT" secondAttribute="trailing" constant="70" id="XdH-HK-Tlb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B8Q-kc-tzS"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="accomplishmentSegmentedControl" destination="eNG-1R-UPK" id="8Uc-MI-Y88"/>
+                        <outlet property="containerViewSegmentedControl" destination="ZnB-Gg-UBT" id="hQg-SB-dc9"/>
+                        <outlet property="containerViewTableView" destination="bHk-mL-KnC" id="6Bw-8m-aMq"/>
                         <outlet property="tableView" destination="TQg-5G-nvL" id="T26-xk-Fl6"/>
                     </connections>
                 </viewController>
