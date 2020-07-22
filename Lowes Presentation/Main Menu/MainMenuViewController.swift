@@ -12,6 +12,9 @@ class MainMenuViewController: UIViewController, Storyboarded {
 	
 	@IBOutlet weak var JoshButton: UIButton!
 	@IBOutlet weak var JasmineButton: UIButton!
+	@IBOutlet weak var logo: UIImageView!
+	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var pickYourInternLabel: UILabel!
 	
 	weak var coordinator: MainMenuCoordinator?
 	var viewModel: MainMenuViewModel?
@@ -21,6 +24,7 @@ class MainMenuViewController: UIViewController, Storyboarded {
 		// Do any additional setup after loading the view.
 		
 		addShadows()
+//		logo.layer.zPosition = -1
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +40,7 @@ class MainMenuViewController: UIViewController, Storyboarded {
 	func addShadows() {
 		guard let coord = coordinator else { return }
 		
-		coord.addShadow(for: JoshButton, JasmineButton)
+		coord.addShadow(for: JoshButton, JasmineButton, logo, titleLabel, pickYourInternLabel)
 	}
 
 	@IBAction func testButton(_ sender: UIButton) {

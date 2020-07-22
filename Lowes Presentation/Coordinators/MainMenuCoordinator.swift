@@ -30,10 +30,10 @@ class MainMenuCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
 		navigationController.pushViewController(vc, animated: false)
 	}
 	
-	func addShadow(for buttons: UIButton...) {
+	func addShadow(for views: UIView...) {
 		guard let vm = viewModel else { return }
 		
-		buttons.forEach {
+		views.forEach {
 			vm.addShadow(for: $0)
 		} //Cannot pass array of type '[UIButton]' as variadic arguments of type 'UIButton' --> Unfortunately can't pass 1 variadic function into another
 		
