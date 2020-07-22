@@ -9,7 +9,6 @@
 		"SFL prices"
 	],
 	"defects": [
-		"Logo issue",
 		"Voiceovers/Accessiblity",
 		"Adobe Analytics",
 		"Broken Tests",
@@ -17,6 +16,8 @@
 		"Token Crash",
 		"Continue Shopping Button Missing",
 		"\"Save\" doesn't appear in cart",
-		"Currency & percentage formatting issues"
+		"Currency & percentage formatting issues",
+		"Logo issue",
+		"Image"
 	]
 }

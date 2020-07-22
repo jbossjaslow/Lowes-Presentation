@@ -33,7 +33,7 @@
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bullet Cell" id="L9A-yx-ViT" customClass="AccomplishmentsTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="398" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="398" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9A-yx-ViT" id="Huk-1D-rSA">
                                             <rect key="frame" x="0.0" y="0.0" width="398" height="46.5"/>
@@ -56,6 +56,29 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="accomplishmentLabel" destination="bd1-Hf-sMo" id="UOr-DC-bgv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Image Cell" id="VpR-Vp-0eI" customClass="ImageTableViewCell" customModule="Lowes_Presentation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="74.5" width="398" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VpR-Vp-0eI" id="ZYb-xL-gdr">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Y0-Cn-tXF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="9Y0-Cn-tXF" firstAttribute="top" secondItem="ZYb-xL-gdr" secondAttribute="top" id="4D1-r1-Q6s"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Y0-Cn-tXF" secondAttribute="trailing" id="9mf-Cx-Iym"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Y0-Cn-tXF" secondAttribute="bottom" id="blD-xp-7MR"/>
+                                                <constraint firstItem="9Y0-Cn-tXF" firstAttribute="leading" secondItem="ZYb-xL-gdr" secondAttribute="leading" id="rK4-js-ex5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageAccomplishView" destination="9Y0-Cn-tXF" id="0j2-ru-pyu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
