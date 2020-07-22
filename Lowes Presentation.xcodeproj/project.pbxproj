@@ -48,8 +48,6 @@
 		EA4FBA3D24C421BB009E548A /* JasminePage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4FBA3C24C421BB009E548A /* JasminePage1ViewController.swift */; };
 		EA4FBA3F24C421C7009E548A /* JasminePage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4FBA3E24C421C7009E548A /* JasminePage2ViewController.swift */; };
 		EA4FBA4124C4246C009E548A /* JasminePageViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4FBA4024C4246C009E548A /* JasminePageViewCoordinator.swift */; };
-		EAFFADC824C57D0200E04512 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFADC724C57D0200E04512 /* ContentView.swift */; };
-		EAFFADCA24C6DA1200E04512 /* ButtonViewTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFADC924C6DA1200E04512 /* ButtonViewTesting.swift */; };
 		EAFFADCC24C76B9700E04512 /* JasmineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFADCB24C76B9700E04512 /* JasmineButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,8 +116,6 @@
 		EA4FBA3C24C421BB009E548A /* JasminePage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasminePage1ViewController.swift; sourceTree = "<group>"; };
 		EA4FBA3E24C421C7009E548A /* JasminePage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasminePage2ViewController.swift; sourceTree = "<group>"; };
 		EA4FBA4024C4246C009E548A /* JasminePageViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasminePageViewCoordinator.swift; sourceTree = "<group>"; };
-		EAFFADC724C57D0200E04512 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EAFFADC924C6DA1200E04512 /* ButtonViewTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewTesting.swift; sourceTree = "<group>"; };
 		EAFFADCB24C76B9700E04512 /* JasmineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasmineButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,8 +361,6 @@
 		EA6B552224C56E570004190A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				EAFFADC724C57D0200E04512 /* ContentView.swift */,
-				EAFFADC924C6DA1200E04512 /* ButtonViewTesting.swift */,
 				EAFFADCB24C76B9700E04512 /* JasmineButton.swift */,
 			);
 			path = UIComponents;
@@ -533,7 +527,6 @@
 				EA4FBA3F24C421C7009E548A /* JasminePage2ViewController.swift in Sources */,
 				EA4FBA4124C4246C009E548A /* JasminePageViewCoordinator.swift in Sources */,
 				EA4FBA3D24C421BB009E548A /* JasminePage1ViewController.swift in Sources */,
-				EAFFADC824C57D0200E04512 /* ContentView.swift in Sources */,
 				39D0244224B0E5B700235682 /* VideoPage1ViewController.swift in Sources */,
 				39D0243F24B0DBC400235682 /* PageViewControllerCoordinator.swift in Sources */,
 				3975E93724BBBABD0030EB79 /* VideoPage1Coordinator.swift in Sources */,
@@ -549,7 +542,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3999B1C024AAC64000428F3A /* Lowes_PresentationTests.swift in Sources */,
-				EAFFADCA24C6DA1200E04512 /* ButtonViewTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,7 @@ public class JasmineButton: UIButton {
         self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         self.layer.cornerRadius = 4.0
         self.applyGradient(colors: [UIColor(red: 0.87, green: 0.37, blue: 0.54, alpha: 1.00).cgColor, UIColor(red: 0.97, green: 0.73, blue: 0.59, alpha: 1.00).cgColor])
+        self.layer.borderColor = UIColor.black.cgColor
     }
 }
 

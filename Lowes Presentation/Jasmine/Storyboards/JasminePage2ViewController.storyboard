@@ -11,30 +11,61 @@
         <scene sceneID="4zt-zx-grr">
             <objects>
                 <viewController storyboardIdentifier="JasminePage2ViewController" id="SKj-lf-BwJ" customClass="JasminePage2ViewController" customModule="Lowes_Presentation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tKO-01-bBx">
+                    <view key="view" contentMode="scaleToFill" id="T1v-Yv-OmK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOv-w5-0Ki">
-                                <rect key="frame" x="20" y="117" width="250" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Working In Collections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1A-EO-OIs">
+                                <rect key="frame" x="20" y="83" width="414" height="97"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lowes-Collections" translatesAutoresizingMaskIntoConstraints="NO" id="aEB-um-yQh">
+                                <rect key="frame" x="20" y="202" width="374" height="411"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="411" id="QKz-Zh-LHU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I implemented the following in Collections:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdp-xT-NTb">
+                                <rect key="frame" x="20" y="637" width="358" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="qY3-PD-0oC">
+                                <rect key="frame" x="15" y="696" width="374" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscienxwt to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gXh-at-le9" firstAttribute="bottom" secondItem="HOv-w5-0Ki" secondAttribute="bottom" constant="705" id="BWV-g2-6V6"/>
-                            <constraint firstItem="HOv-w5-0Ki" firstAttribute="top" secondItem="gXh-at-le9" secondAttribute="top" constant="73" id="Lhj-7a-d84"/>
-                            <constraint firstItem="HOv-w5-0Ki" firstAttribute="leading" secondItem="gXh-at-le9" secondAttribute="leading" constant="20" id="MeZ-Tv-Uka"/>
-                            <constraint firstItem="gXh-at-le9" firstAttribute="trailing" secondItem="HOv-w5-0Ki" secondAttribute="trailing" constant="144" id="ish-Fc-Bom"/>
+                            <constraint firstItem="z1A-EO-OIs" firstAttribute="trailing" secondItem="UQT-M3-3aL" secondAttribute="trailing" constant="20" id="5gX-UY-W78"/>
+                            <constraint firstItem="z1A-EO-OIs" firstAttribute="leading" secondItem="UQT-M3-3aL" secondAttribute="leading" constant="20" id="A6q-W1-o3c"/>
+                            <constraint firstItem="z1A-EO-OIs" firstAttribute="top" secondItem="UQT-M3-3aL" secondAttribute="top" constant="39" id="PYi-9w-6Uw"/>
+                            <constraint firstItem="aEB-um-yQh" firstAttribute="top" secondItem="T1v-Yv-OmK" secondAttribute="top" constant="202" id="SZA-OB-Hxf"/>
+                            <constraint firstItem="aEB-um-yQh" firstAttribute="trailing" secondItem="T1v-Yv-OmK" secondAttribute="trailingMargin" id="VPn-ye-Rvd"/>
+                            <constraint firstItem="aEB-um-yQh" firstAttribute="leading" secondItem="z1A-EO-OIs" secondAttribute="leading" id="iZU-E0-Mwm"/>
+                            <constraint firstItem="aEB-um-yQh" firstAttribute="top" secondItem="z1A-EO-OIs" secondAttribute="bottom" constant="22" id="rUB-fW-zd8"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gXh-at-le9"/>
+                        <viewLayoutGuide key="safeArea" id="UQT-M3-3aL"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="qY3-PD-0oC" id="arQ-2g-mCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLa-XA-4MF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lowes-Collections" width="842" height="1666"/>
+    </resources>
 </document>
