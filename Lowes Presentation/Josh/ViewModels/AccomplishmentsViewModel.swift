@@ -46,11 +46,19 @@ extension AccomplishmentsViewModel: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let currAcc = currentAccomplishments else { return UITableViewCell() }
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Bullet Cell", for: indexPath) as! AccomplishmentsTableViewCell
-		
-		cell.accomplishmentLabel.text = "• " + currAcc[indexPath.row]
-		
-		return cell
+		if currAcc[indexPath.row] == "Image" {
+			let cell = tableView.dequeueReusableCell(withIdentifier: "Image Cell", for: indexPath) as! ImageTableViewCell
+			
+			cell.imageAccomplishView.image = UIImage(named: "broken-lowes")
+			
+			return cell
+		} else {
+			let cell = tableView.dequeueReusableCell(withIdentifier: "Bullet Cell", for: indexPath) as! AccomplishmentsTableViewCell
+			
+			cell.accomplishmentLabel.text = "• " + currAcc[indexPath.row]
+			
+			return cell
+		}
 	}
 }
 

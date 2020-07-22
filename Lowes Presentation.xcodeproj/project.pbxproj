@@ -17,6 +17,7 @@
 		3918D80624C6708F003CD2BF /* VideoPage2Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3918D80524C6708F003CD2BF /* VideoPage2Coordinator.swift */; };
 		3918D80824C670BD003CD2BF /* VideoPage2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3918D80724C670BD003CD2BF /* VideoPage2ViewModel.swift */; };
 		3918D80A24C6711F003CD2BF /* 3022 - name, image and price.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3918D80924C6711F003CD2BF /* 3022 - name, image and price.mov */; };
+		3918D80C24C8D38A003CD2BF /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3918D80B24C8D38A003CD2BF /* ImageTableViewCell.swift */; };
 		3971C55924C3B653008D473A /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3971C55824C3B653008D473A /* MainMenuViewModel.swift */; };
 		3975E93224B944F70030EB79 /* VideoPage1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3975E93124B944F70030EB79 /* VideoPage1ViewModel.swift */; };
 		3975E93424B9478B0030EB79 /* Curbside Pickup - Final Presentation.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3975E93324B9478B0030EB79 /* Curbside Pickup - Final Presentation.mov */; };
@@ -48,8 +49,6 @@
 		EA4FBA3D24C421BB009E548A /* JasminePage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4FBA3C24C421BB009E548A /* JasminePage1ViewController.swift */; };
 		EA4FBA3F24C421C7009E548A /* JasminePage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4FBA3E24C421C7009E548A /* JasminePage2ViewController.swift */; };
 		EA4FBA4124C4246C009E548A /* JasminePageViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4FBA4024C4246C009E548A /* JasminePageViewCoordinator.swift */; };
-		EAFFADC824C57D0200E04512 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFADC724C57D0200E04512 /* ContentView.swift */; };
-		EAFFADCA24C6DA1200E04512 /* ButtonViewTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFADC924C6DA1200E04512 /* ButtonViewTesting.swift */; };
 		EAFFADCC24C76B9700E04512 /* JasmineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFADCB24C76B9700E04512 /* JasmineButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +80,7 @@
 		3918D80524C6708F003CD2BF /* VideoPage2Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPage2Coordinator.swift; sourceTree = "<group>"; };
 		3918D80724C670BD003CD2BF /* VideoPage2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPage2ViewModel.swift; sourceTree = "<group>"; };
 		3918D80924C6711F003CD2BF /* 3022 - name, image and price.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3022 - name, image and price.mov"; sourceTree = "<group>"; };
+		3918D80B24C8D38A003CD2BF /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		3971C55824C3B653008D473A /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		3975E93124B944F70030EB79 /* VideoPage1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPage1ViewModel.swift; sourceTree = "<group>"; };
 		3975E93324B9478B0030EB79 /* Curbside Pickup - Final Presentation.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Curbside Pickup - Final Presentation.mov"; sourceTree = "<group>"; };
@@ -118,8 +118,6 @@
 		EA4FBA3C24C421BB009E548A /* JasminePage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasminePage1ViewController.swift; sourceTree = "<group>"; };
 		EA4FBA3E24C421C7009E548A /* JasminePage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasminePage2ViewController.swift; sourceTree = "<group>"; };
 		EA4FBA4024C4246C009E548A /* JasminePageViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasminePageViewCoordinator.swift; sourceTree = "<group>"; };
-		EAFFADC724C57D0200E04512 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EAFFADC924C6DA1200E04512 /* ButtonViewTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewTesting.swift; sourceTree = "<group>"; };
 		EAFFADCB24C76B9700E04512 /* JasmineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasmineButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				3918D7FE24C4F0EF003CD2BF /* AccomplishmentsTableViewCell.swift */,
+				3918D80B24C8D38A003CD2BF /* ImageTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -365,8 +364,6 @@
 		EA6B552224C56E570004190A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				EAFFADC724C57D0200E04512 /* ContentView.swift */,
-				EAFFADC924C6DA1200E04512 /* ButtonViewTesting.swift */,
 				EAFFADCB24C76B9700E04512 /* JasmineButton.swift */,
 			);
 			path = UIComponents;
@@ -529,11 +526,11 @@
 				3918D80824C670BD003CD2BF /* VideoPage2ViewModel.swift in Sources */,
 				39D0243B24B0DA7200235682 /* JoshPageViewController.swift in Sources */,
 				3999B1A924AAC63F00428F3A /* AppDelegate.swift in Sources */,
+				3918D80C24C8D38A003CD2BF /* ImageTableViewCell.swift in Sources */,
 				EAFFADCC24C76B9700E04512 /* JasmineButton.swift in Sources */,
 				EA4FBA3F24C421C7009E548A /* JasminePage2ViewController.swift in Sources */,
 				EA4FBA4124C4246C009E548A /* JasminePageViewCoordinator.swift in Sources */,
 				EA4FBA3D24C421BB009E548A /* JasminePage1ViewController.swift in Sources */,
-				EAFFADC824C57D0200E04512 /* ContentView.swift in Sources */,
 				39D0244224B0E5B700235682 /* VideoPage1ViewController.swift in Sources */,
 				39D0243F24B0DBC400235682 /* PageViewControllerCoordinator.swift in Sources */,
 				3975E93724BBBABD0030EB79 /* VideoPage1Coordinator.swift in Sources */,
@@ -549,7 +546,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3999B1C024AAC64000428F3A /* Lowes_PresentationTests.swift in Sources */,
-				EAFFADCA24C6DA1200E04512 /* ButtonViewTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

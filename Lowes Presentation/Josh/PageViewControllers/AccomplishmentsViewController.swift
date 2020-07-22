@@ -24,6 +24,7 @@ class AccomplishmentsViewController: UIViewController, Storyboarded {
 		self.tableView.dataSource = coord.viewModel
 		
 		addShadow(containerViewTableView)
+		containerViewTableView.layer.cornerRadius = 10
 		
 		tableView.layer.cornerRadius = 10
 		tableView.layer.masksToBounds = true
